@@ -1,0 +1,14 @@
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\bin\Debug\net6.0\HaliSaha_Model.deps.json
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\bin\Debug\net6.0\HaliSaha_Model.dll
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\bin\Debug\net6.0\HaliSaha_Model.pdb
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.csproj.AssemblyReference.cache
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.AssemblyInfoInputs.cache
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.AssemblyInfo.cs
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.csproj.CoreCompileInputs.cache
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.dll
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\refint\HaliSaha_Model.dll
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.pdb
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\ref\HaliSaha_Model.dll
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\bin\Debug\net6.0\HaliSaha_Model.runtimeconfig.json
+C:\Users\beyzanur\Desktop\Hali-Saha\HaliSaha_Model\obj\Debug\net6.0\HaliSaha_Model.genruntimeconfig.cache
