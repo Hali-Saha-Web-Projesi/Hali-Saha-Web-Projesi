@@ -1,6 +1,4 @@
 ﻿
-//database e veri ekleniyor mu bak
-//modelleri viewde göster data aannnooo video 124
 //giriş yap deyince linq ile soegu yapıcaz
 
 using HaliSaha_Model.Models;

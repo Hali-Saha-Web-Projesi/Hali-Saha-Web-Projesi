@@ -30,13 +30,13 @@
 		<h1>Giriş Yap </h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form method="post" asp-controller="Home" asp-action="Index">
+				<form method="post" asp-controller="Login" asp-action="Index">
 
-					<span asp-validation-for="@Model.KullaniciEmail" class="text-danger"></span>
-					<input class="text email" asp-for="@Model.KullaniciEmail" type="email" name="email" placeholder="Email" required="">
-
+					<span asp-validation-for="@Model.KullaniciAd" class="text-danger"></span>
+					<input class="text" asp-for="KullaniciAd" type="text"  placeholder="Kullanıcı Adı" required="">
+					<br />
 					<span asp-validation-for="@Model.KullaniciSifre" class="text-danger"></span>
-					<input class="text" asp-for="@Model.KullaniciSifre" type="password" name="password" placeholder="Şifre" required="">
+					<input class="text" asp-for="KullaniciSifre" type="password" placeholder="Şifre" required="">
 
 					<input type="submit" value="Giriş Yap">
 

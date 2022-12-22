@@ -19,10 +19,9 @@ namespace HaliSaha_Model.Models
         [MinLength(8, ErrorMessage = "Şifreniz minimum 8 karakterden oluşmalıdır.")]
         public string KullaniciSifre { get; set; }
 
-        [Required(ErrorMessage = "Lütfen email adresinizi giriniz.")]
-        [EmailAddress]
-        [Display(Name = "Email  :")]
-        public string KullaniciEmail { get; set; }
+        [Required(ErrorMessage = "Lütfen kullanıcı adınızı giriniz.")]
+        [Display(Name = "Kullanıcı Adınız  :")]
+        public string KullaniciAd { get; set; }
 
         //public ICollection<Randevu> randevular { get; set; }
     }

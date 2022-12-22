@@ -6,10 +6,11 @@
     "\\Hali-Saha",
     "\\Hali-Saha\\Controllers",
     "\\Hali-Saha\\Views",
+    "\\Hali-Saha\\Views\\Login",
     "\\Hali-Saha\\Views\\Register",
     "\\HaliSaha_Model",
     "\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\DataAccess\\Data\\DbHaliSahaContext.cs",
+  "SelectedNode": "\\Hali-Saha.sln",
   "PreviewInSolutionExplorer": false
 }

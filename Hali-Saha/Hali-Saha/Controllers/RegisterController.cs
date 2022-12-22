@@ -10,6 +10,7 @@ namespace Hali_Saha.Controllers
     {
         //sisteme identity üzerinden kayıt olmak için kullanıldıgım komut 
         private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<AppRole> _roleManager;
 
         public RegisterController(UserManager<AppUser> userManager)
         {
@@ -36,6 +37,7 @@ namespace Hali_Saha.Controllers
                 var result = await _userManager.CreateAsync(user,p.KullaniciSifre);
                 if (result.Succeeded)
                 {
+                    AssignRole(p.KullaniciId);
                     return RedirectToAction("Index", "Login"); 
 
                 }
@@ -50,6 +52,25 @@ namespace Hali_Saha.Controllers
 
             }
             return View(p);
+        }
+
+        [HttpGet]
+        public async void AssignRole(int id)
+        {
+
+            var user=_userManager.Users.FirstOrDefault(x => x.Id == id);
+            var roles = _roleManager.Roles.ToList();
+            TempData["Userid"] = user.Id;
+            var userRoles = await _userManager.GetRolesAsync(user);
+            List<RoleAssignViewModel> model=new List<RoleAssignViewModel>();
+            foreach (var role in roles)
+            {
+                RoleAssignViewModel m = new RoleAssignViewModel();
+                m.RoleId = role.Id;
+                m.RoleName = role.Name; 
+                model.Add(m);   
+            }
+ 
         }
     }
 }

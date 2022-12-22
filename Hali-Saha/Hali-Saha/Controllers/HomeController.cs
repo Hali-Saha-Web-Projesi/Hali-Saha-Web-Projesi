@@ -17,7 +17,6 @@ namespace Hali_Saha.Controllers
         {
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();

@@ -14,20 +14,20 @@ namespace HaliSaha_Model.Models
         public int KullaniciId { get; set; }
 
         [Required(ErrorMessage = "Lütfen adınızı giriniz.")]
-        [MaxLength(20)]
+        [MaxLength(50)]
         [MinLength(3)]
         [Display(Name = "İsim   :")]
         public string KullaniciAd { get; set; }
 
         [Required(ErrorMessage = "Lütfen soyadınızı giriniz.")]
-        [MaxLength(20)]
+        [MaxLength(50)]
         [Display(Name = "Soyisim   :")]
         public string KullaniciSoyad { get; set; }
 
         [Required(ErrorMessage = "Lütfen şifrenizi giriniz.")]
         [DataType(DataType.Password)]
         [Display(Name = "Şifre  :")]
-        [MinLength(8, ErrorMessage = "Şifreniz minimum 8 karakterden oluşmalıdır.")]
+        [MinLength(2, ErrorMessage = "Şifreniz minimum 2 karakterden oluşmalıdır.")]
         public string KullaniciSifre { get; set; }
 
         [Required(ErrorMessage = "Lütfen şifrenizi tekrar giriniz.")]
@@ -41,7 +41,7 @@ namespace HaliSaha_Model.Models
         [Display(Name = "Email  :")]
         public string KullaniciEmail { get; set; }
 
-        public ICollection<Randevu> randevular { get; set; }
+        //public ICollection<Randevu> randevular { get; set; }
 
     }
 }

@@ -30,21 +30,21 @@
 		<h1>Üye Ol</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form method="post" asp-controller="Home" asp-action="Index">
+				<form method="post" asp-controller="Register" asp-action="Index">
 					<span asp-validation-for="@Model.KullaniciAd" class="text-danger"></span>
-					<input class="text" asp-for="@Model.KullaniciAd" type="text" name="KullaniciAd" placeholder="Ad" required="">
+					<input class="text" asp-for="KullaniciAd" type="text" placeholder="Ad" required="">
 					 <br />
 					<span asp-validation-for="@Model.KullaniciSoyad" class="text-danger"></span>
-					<input class="text" asp-for="@Model.KullaniciSoyad" type="text" name="KullanniciSoyad" placeholder="Soyad" required="">
+					<input class="text" asp-for="KullaniciSoyad" type="text" placeholder="Soyad" required="">
 					
 					<span asp-validation-for="@Model.KullaniciEmail" class="text-danger"></span>
-					<input class="text email" asp-for="@Model.KullaniciEmail" type="email" name="email" placeholder="Email" required="">
+					<input class="text email" asp-for="KullaniciEmail" type="email" placeholder="Email" required="">
 					
 					<span asp-validation-for="@Model.KullaniciSifre" class="text-danger"></span>
-					<input class="text" asp-for="@Model.KullaniciSifre" type="password" name="password" placeholder="Şifre" required="">
+					<input class="text" asp-for="KullaniciSifre" type="password" placeholder="Şifre" required="">
 					
 					<span asp-validation-for="@Model.KullaniciSifreTekrar" class="text-danger"></span>
-					<input class="text w3lpass" asp-for="@Model.KullaniciSifreTekrar" type="password" name="password" placeholder="Şifre Tekrar" required="">
+					<input class="text w3lpass" asp-for="KullaniciSifreTekrar" type="password" placeholder="Şifre Tekrar" required="">
 					
 					
 					<div class="wthree-text">

@@ -160,8 +160,8 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("KullaniciAd")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("KullaniciEmail")
                         .IsRequired()
@@ -177,8 +177,8 @@ namespace DataAccess.Migrations
 
                     b.Property<string>("KullaniciSoyad")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("KullaniciId");
 
@@ -323,7 +323,7 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("HaliSaha_Model.Models.Randevu", b =>
                 {
                     b.HasOne("HaliSaha_Model.Models.Register", "kullanici")
-                        .WithMany("randevular")
+                        .WithMany()
                         .HasForeignKey("KullaniciId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -388,11 +388,6 @@ namespace DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("HaliSaha_Model.Models.Register", b =>
-                {
-                    b.Navigation("randevular");
                 });
 
             modelBuilder.Entity("HaliSaha_Model.Models.SporTesisi", b =>

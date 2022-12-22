@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {}
+    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
+    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+        "projectUniqueName": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
         "projectName": "HaliSaha_Model",
-        "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+        "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
         "packagesPath": "C:\\Users\\beyzanur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha\\HaliSaha_Model\\obj\\",
+        "outputPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,41 @@
+﻿
+@using HaliSaha_Model.Models
+@model SporTesisi
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MerkezCreate">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <input type="url" asp-for="TesisResmi" class="form-control" />
+                <span asp-validation-for="TesisResmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input asp-for="TesisId" class="form-control" />
+                <span asp-validation-for="TesisId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input asp-for="TesisAdi" class="form-control" />
+                <span asp-validation-for="TesisAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input asp-for="TesisAdresi" class="form-control" />
+                <span asp-validation-for="TesisAdresi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="TesisIndex">BEN TESİS</a>
+</div>
