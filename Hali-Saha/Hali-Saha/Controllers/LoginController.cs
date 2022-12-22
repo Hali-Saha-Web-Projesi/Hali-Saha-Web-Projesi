@@ -18,8 +18,7 @@ namespace Hali_Saha.Controllers
         }
         [HttpGet]
         public IActionResult Index()
-        {
-           
+        { 
             return View();
         }
 
