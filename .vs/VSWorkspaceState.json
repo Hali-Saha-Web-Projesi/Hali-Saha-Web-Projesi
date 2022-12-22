@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Hali-Saha",
+    "\\Hali-Saha\\Hali-Saha",
+    "\\Hali-Saha\\Hali-Saha\\Controllers",
     "\\Hali-Saha\\HaliSaha_Model",
     "\\Hali-Saha\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\Hali-Saha\\HaliSaha_Model\\Models\\AppRole.cs",
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha.sln",
   "PreviewInSolutionExplorer": false
 }

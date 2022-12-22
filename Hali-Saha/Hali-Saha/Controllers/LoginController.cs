@@ -28,7 +28,7 @@ namespace Hali_Saha.Controllers
             if (ModelState.IsValid)
             {
                 //false cookilerin hatırlamasına engel olurken true ise 5 kere yanlış girince banlansın 
-                var result = await _signInManager.PasswordSignInAsync(p.KullaniciAd,p.KullaniciSifre,true,true);
+                var result = await _signInManager.PasswordSignInAsync(p.KullaniciAd,p.KullaniciSifre,false,true);
 
                 if (result.Succeeded)
                 {

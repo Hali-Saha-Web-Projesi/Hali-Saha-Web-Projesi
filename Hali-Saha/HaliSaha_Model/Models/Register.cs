@@ -41,6 +41,7 @@ namespace HaliSaha_Model.Models
         [Display(Name = "Email  :")]
         public string KullaniciEmail { get; set; }
 
+        //public string Role { get; set; }
         //public ICollection<Randevu> randevular { get; set; }
 
     }

@@ -1,12 +1,15 @@
 ﻿using HaliSaha_Model.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using System.Runtime.CompilerServices;
 
 namespace Hali_Saha.Controllers
 {
     [AllowAnonymous]
-    public class RegisterController : Controller 
+    public class RegisterController : Controller
     {
         //sisteme identity üzerinden kayıt olmak için kullanıldıgım komut 
         private readonly UserManager<AppUser> _userManager;
@@ -15,7 +18,9 @@ namespace Hali_Saha.Controllers
         public RegisterController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
+            
         }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -25,6 +30,10 @@ namespace Hali_Saha.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(Register p)
         {
+            //returnUrl = returnUrl ?? Url.Content("~/");
+            //ExternalLogins 
+
+            //p.Role = "Musteri";
             if (ModelState.IsValid)
             {
                 AppUser user = new AppUser()
@@ -32,22 +41,28 @@ namespace Hali_Saha.Controllers
                         Email =p.KullaniciEmail,
                         UserName=p.KullaniciAd,
                         NameSurname=p.KullaniciSoyad
+                        //Role = "Musteri"
 
                 };
+
+                //AppRole role = new AppRole()
+                //{
+                   
+                //    Name = "Musteri",
+                //    Id=2
+
+                //};
+
                 var result = await _userManager.CreateAsync(user,p.KullaniciSifre);
+                //var addRole = await _userManager.AddToRoleAsync(user,role.Name);
+
                 if (result.Succeeded)
                 {
-                    _userManager.AddToRole(user.Id, "musteri");
+                   /* System.Collections.Generic.IEnumerable<string> roles = new string[1];
+                    roles.Append("Musteri");
+                    
+                     await _userManager.AddToRolesAsync(user, roles);*/
 
-                    //Acil bakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-                    /* RoleAssignViewModel m = AssignRole(p.KullaniciId);
-                       AppRole role = new AppRole()
-                    {
-                        Email = p.KullaniciEmail,
-                        UserName = p.KullaniciAd,
-                        NameSurname = p.KullaniciSoyad
-
-                    };*/
 
                     return RedirectToAction("Index", "Login");
                 }
@@ -64,24 +79,5 @@ namespace Hali_Saha.Controllers
             return View(p);
         }
 
-        /*[HttpGet]
-        public async RoleAssignViewModel AssignRole(int id)
-        {
-
-            var user=_userManager.Users.FirstOrDefault(x => x.Id == id);
-           // var roles = _roleManager.Roles.ToList();
-            TempData["Userid"] = user.Id;
-            var userRoles = await _userManager.GetRolesAsync(user);
-            //List<RoleAssignViewModel> model=new List<RoleAssignViewModel>();
-            //foreach (var role in roles)
-            //{
-                RoleAssignViewModel m = new RoleAssignViewModel();
-                m.RoleId = 2;
-                m.RoleName = "musteri";
-            // model.Add(m);   
-            //}
-
-            return m;
-        }*/
     }
 }

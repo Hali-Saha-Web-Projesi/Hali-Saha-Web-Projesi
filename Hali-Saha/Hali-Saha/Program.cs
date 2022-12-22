@@ -10,7 +10,6 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<DbHaliSahaContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<DbHaliSahaContext>();
 
-
 var provider = builder.Services.BuildServiceProvider();
 
 var configuration = provider.GetRequiredService<IConfiguration>();
