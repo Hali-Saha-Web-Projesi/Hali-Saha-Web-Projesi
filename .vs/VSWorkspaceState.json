@@ -3,16 +3,8 @@
     "",
     "\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha",
-    "\\Hali-Saha\\Hali-Saha\\Controllers",
-    "\\Hali-Saha\\Hali-Saha\\Views",
-    "\\Hali-Saha\\Hali-Saha\\Views\\Randevu",
-    "\\Hali-Saha\\HaliSaha_Model",
-    "\\Hali-Saha\\HaliSaha_Model\\Models"
+    "\\Hali-Saha\\Hali-Saha\\Controllers"
   ],
-<<<<<<< Updated upstream
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Views\\Randevu\\Index.cshtml",
-=======
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\AdminController.cs",
->>>>>>> Stashed changes
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\RandevuController.cs",
   "PreviewInSolutionExplorer": false
 }

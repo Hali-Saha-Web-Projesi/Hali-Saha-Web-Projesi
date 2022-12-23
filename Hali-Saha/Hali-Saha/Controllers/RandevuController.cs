@@ -11,22 +11,23 @@ using System.Security.Claims;
 
 namespace Hali_Saha.Controllers
 {
+    //[AllowAnonymous]
     public class RandevuController : Controller
     {
         private readonly DbHaliSahaContext _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly ILogger<RandevuController> _logger;
-        // private readonly IStringLocalizer<RandevuController> _localizer;
+        private readonly IStringLocalizer<RandevuController> _localizer;
 
         public RandevuController(DbHaliSahaContext context, UserManager<AppUser> userManager, ILogger<RandevuController> logger, IStringLocalizer<RandevuController> localizer)
         {
-            //_localizer = localizer;
+            _localizer = localizer;
             _logger = logger;
             _userManager = userManager;
             _context = context;
         }
 
-        /*[HttpPost]
+        [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
@@ -36,8 +37,8 @@ namespace Hali_Saha.Controllers
             );
 
             return LocalRedirect(returnUrl);
-        }*/
-        [Authorize]
+        }
+       [Authorize]
         public async Task<ActionResult> Index()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);

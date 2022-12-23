@@ -1,4 +1,4 @@
-﻿@model Hali_Saha.Models.Randevu
+﻿@model HaliSaha_Model.Models.Randevu
 
 @{
     ViewData["Title"] = "Randevu Al";
@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label class="control-label">Müşteri Adı</label>
-                <select asp-for="KullanciId" class="form-control">
+                <select asp-for="KullaniciId" class="form-control">
                     <option>@ViewBag.userId</option>
                 </select>
             </div>

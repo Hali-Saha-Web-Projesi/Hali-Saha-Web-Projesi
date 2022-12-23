@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Hali_Saha.Models.Randevu>
+﻿@model IEnumerable<HaliSaha_Model.Models.Randevu>
 
 @{
     ViewData["Title"] = "Randevu Listesi";
@@ -35,7 +35,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.kullanici.KullaniciAdı) @Html.DisplayFor(modelItem => item.kullanici.KullaniciSoyad)
+                    @Html.DisplayFor(modelItem => item.kullanici.KullaniciAd) @Html.DisplayFor(modelItem => item.kullanici.KullaniciSoyad)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.sporTesisi.TesisAdi)

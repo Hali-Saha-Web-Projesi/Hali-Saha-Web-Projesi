@@ -16,7 +16,9 @@ namespace HaliSaha_Model.Models
 
         [ForeignKey("kullanici")]
         public int KullaniciId { get; set; }
-        public Register kullanici { get; set; } //sen bir şuraya bak
+        public Kullanici kullanici1 { get; set; } //sen bir şuraya bak
+
+        public Register kullanici;
 
        
 

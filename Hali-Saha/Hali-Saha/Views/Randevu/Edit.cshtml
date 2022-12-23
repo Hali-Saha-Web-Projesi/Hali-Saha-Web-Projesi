@@ -1,6 +1,7 @@
 ﻿
-@model  Tuple<Randevu, SporTesisi>
+@model Tuple<HaliSaha_Model.Models.Randevu, HaliSaha_Model.Models.SporTesisi>
 
+<br />
 @{
     ViewData["Title"] = "Randevu Düzenle";
 }
@@ -28,21 +29,21 @@
                 <span asp-validation-for=@Html.TextBoxFor(m => m.Item2.TesisDegerlendirmesi) class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuanı) class="control-label"></label>
+                <label asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuani) class="control-label"></label>
                 @if (DateTime.Now.Date < ViewBag.gun)
                 {
-                    <input asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuanı) class="form-control" disabled />
+                    <input asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuani) class="form-control" disabled />
                 }
                 else
                 {
-                    <input asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuanı) class="form-control" />
+                    <input asp-for=@Html.TextBoxFor(m => m.Item2.TesisPuani) class="form-control" />
                 }
-                <span asp-validation-for=@Html.TextBoxFor(m => m.Item2.TesisPuanı) class="text-danger"></span>
+                <span asp-validation-for=@Html.TextBoxFor(m => m.Item2.TesisPuani) class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Html.TextBoxFor(m => m.Item1.RandevuTarihi) class="control-label"></label>
-                <input asp-for=@Html.TextBoxFor(m => m.Item1.RandevuTarihi) class="form-control" />
-                <span asp-validation-for=@Html.TextBoxFor(m => m.Item1.RandevuTarihi) class="text-danger"></span>
+                <label asp-for=@Html.TextBoxFor(m => m.Item1.randevuTarihi) class="control-label"></label>
+                <input asp-for=@Html.TextBoxFor(m => m.Item1.randevuTarihi) class="form-control" />
+                <span asp-validation-for=@Html.TextBoxFor(m => m.Item1.randevuTarihi) class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Kaydet" class="btn btn-primary" />

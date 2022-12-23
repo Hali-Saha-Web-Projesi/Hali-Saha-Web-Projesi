@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Data;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Hali_Saha.Controllers
 {
@@ -16,14 +19,14 @@ namespace Hali_Saha.Controllers
 
     public class AdminController : Controller
     {
-        private readonly RoleManager<AppRole> _roleManager;
+        //private readonly RoleManager<AppRole> _roleManager;
         private readonly DbHaliSahaContext _context;
         private readonly ILogger<AdminController> _logger;
         private readonly IStringLocalizer<AdminController> _localizer;
 
         public AdminController(RoleManager<AppRole> roleManager, DbHaliSahaContext context, ILogger<AdminController> logger, IStringLocalizer<AdminController> localizer)
         {
-            _roleManager = roleManager;
+            //_roleManager = roleManager;
             _context = context;
             _logger = logger;
             _localizer = localizer;

@@ -2,8 +2,21 @@ using DataAccess.Data;
 using HaliSaha_Model.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.Cookie.Name = "NetCoreMvc.Auth"; //cookie ismi
+    options.LoginPath = "/Login/Index";     //kullanýcý bulunamazsa nereye yönleneceði(cookie bulunamazsa yani) indexe gider.
+    options.AccessDeniedPath = "/Login/Index";//kullanýcýnýn ayný zamanda yetkili olmasý için kullanýlýr. yetkisiz kullanýcýyý da login ýndexe gönder
+});
+
+
 
 //LOCALÝZATÝON ÝÇÝN
 builder.Services.AddLocalization();
@@ -19,10 +32,11 @@ localizationOptions.SupportedUICultures = supportedCultures;
 localizationOptions.SetDefaultCulture("tr");
 localizationOptions.ApplyCurrentCultureToResponseHeaders = true;
 
+
+
 //builder.Services.AddControllers();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+
 //register sayfasý için
 //builder.Services.AddDbContext<DbHaliSahaContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<DbHaliSahaContext>();
@@ -54,6 +68,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
