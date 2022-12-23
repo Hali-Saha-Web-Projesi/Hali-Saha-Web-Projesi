@@ -1,8 +1,25 @@
 using DataAccess.Data;
 using HaliSaha_Model.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//LOCALÝZATÝON ÝÇÝN
+builder.Services.AddLocalization();
+var localizationOptions = new RequestLocalizationOptions();
+builder.Services.AddMvc().AddViewLocalization(); //bak
+var supportedCultures = new[]
+{
+    new CultureInfo("en-US"),
+    new CultureInfo("tr")
+};
+localizationOptions.SupportedCultures = supportedCultures;
+localizationOptions.SupportedUICultures = supportedCultures;
+localizationOptions.SetDefaultCulture("tr");
+localizationOptions.ApplyCurrentCultureToResponseHeaders = true;
+
+//builder.Services.AddControllers();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -18,7 +35,11 @@ builder.Services.AddDbContext<DbHaliSahaContext>(item => item.UseSqlServer(confi
 
 var app = builder.Build();
 
+//LOCALÝZATÝON
+app.UseRequestLocalization(localizationOptions);
 
+
+builder.Services.AddHttpContextAccessor(); //bir bak
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -37,6 +58,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=Register}/{action=Index}/{id?}");
 
 app.Run();

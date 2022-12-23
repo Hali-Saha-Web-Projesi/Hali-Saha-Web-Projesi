@@ -18,6 +18,14 @@
         },
         "runtime": {
           "Hali-Saha.dll": {}
+        },
+        "resources": {
+          "en-US/Hali-Saha.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr/Hali-Saha.resources.dll": {
+            "locale": "tr"
+          }
         }
       },
       "Humanizer.Core/2.8.26": {

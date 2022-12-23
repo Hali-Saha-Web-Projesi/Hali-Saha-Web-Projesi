@@ -128,3 +128,10 @@ C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj
 C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.pdb
 C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.genruntimeconfig.cache
 C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\ref\Hali-Saha.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\en-US\Hali-Saha.resources.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\tr\Hali-Saha.resources.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali_Saha.Resources.SharedResource.en-US.resources
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali_Saha.Resources.SharedResource.tr.resources
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.csproj.GenerateResource.cache
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\en-US\Hali-Saha.resources.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\tr\Hali-Saha.resources.dll

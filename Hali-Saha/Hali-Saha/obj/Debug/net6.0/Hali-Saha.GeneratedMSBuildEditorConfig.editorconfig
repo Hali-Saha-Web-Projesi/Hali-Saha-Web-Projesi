@@ -15,10 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/Admin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/Admin/TesisCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVzaXNDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -65,6 +61,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/SporTesisi/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvclRlc2lzaVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/SporTesisi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvclRlc2lzaVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/beyzanur/Documents/GitHub/Hali-Saha-Web-Projesi/Hali-Saha/Hali-Saha/Views/_ViewImports.cshtml]

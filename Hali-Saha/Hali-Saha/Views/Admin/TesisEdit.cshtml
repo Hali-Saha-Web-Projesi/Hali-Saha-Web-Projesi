@@ -1,4 +1,47 @@
-﻿
-@using HaliSaha_Model.Models
+﻿@using HaliSaha_Model.Models
 @model SporTesisi
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
 
+@{
+    ViewData["Title"] = _localizer["Spor Tesisini Düzenle"];
+    ViewData["Title2"] = _localizer["Halısaha Adı"];
+    ViewData["Title3"] = _localizer["Adresi"];
+    ViewData["Title5"] = _localizer["Kaydet"];
+    ViewData["Title6"] = _localizer["Halısahalara Geri Dön"];
+    ViewData["Title7"] = _localizer["Tesis Resmi"];
+}
+<h5>@ViewData["Title"]</h5>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TesisEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TesisId" />
+            <div class="form-group">
+                <label class="control-label">@ViewData["Title7"]</label>
+                <input type="url" asp-for="TesisResmi" class="form-control" />
+                <span asp-validation-for="TesisResmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> @ViewData["Title2"]</label>
+                <input asp-for="TesisAdi" class="form-control" />
+                <span asp-validation-for="TesisAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@ViewData["Title3"]</label>
+                <input asp-for="TesisAdresi" class="form-control" />
+                <span asp-validation-for="TesisAdresi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@ViewData["Title5"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="TesisIndex">@ViewData["Title6"]</a>
+</div>
