@@ -4,9 +4,11 @@
     "\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha\\Controllers",
+    "\\Hali-Saha\\Hali-Saha\\Views",
+    "\\Hali-Saha\\Hali-Saha\\Views\\Randevu",
     "\\Hali-Saha\\HaliSaha_Model",
     "\\Hali-Saha\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha.sln",
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Views\\Randevu\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

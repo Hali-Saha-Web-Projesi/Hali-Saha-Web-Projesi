@@ -2926,19 +2926,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Zeynep\\.nuget\\packages\\": {}
+    "C:\\Users\\beyzanur\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zeynep\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+      "projectUniqueName": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
       "projectName": "HaliSaha_Model",
-      "projectPath": "C:\\Users\\Zeynep\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
-      "packagesPath": "C:\\Users\\Zeynep\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zeynep\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\obj\\",
+      "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+      "packagesPath": "C:\\Users\\beyzanur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Zeynep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beyzanur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2946,6 +2951,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3003,7 +3009,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
