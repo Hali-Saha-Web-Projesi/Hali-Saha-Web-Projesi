@@ -4,9 +4,12 @@
     "\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha\\Controllers",
+    "\\Hali-Saha\\Hali-Saha\\Views",
+    "\\Hali-Saha\\Hali-Saha\\Views\\Admin",
+    "\\Hali-Saha\\Hali-Saha\\Views\\SporTesisi",
     "\\Hali-Saha\\HaliSaha_Model",
     "\\Hali-Saha\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\RandevuController.cs",
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\SporTesisiController.cs",
   "PreviewInSolutionExplorer": false
 }

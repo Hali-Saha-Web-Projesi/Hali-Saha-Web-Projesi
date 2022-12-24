@@ -1,28 +1,27 @@
-﻿
-@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer _localizer
-
 @{
-    ViewData["Title2"] = _localizer["Yeni Tesis Ekle"];
+    ViewData["Title2"] = _localizer["Yeni Merkez Ekle"];
     ViewData["Title3"] = _localizer["Detaylar"];
-    ViewData["Title4"] = _localizer["Spor Tesisleri"];
+    ViewData["Title4"] = _localizer["Güzellik Merkezleri"];
 }
 @model IEnumerable<HaliSaha_Model.Models.SporTesisi>
 
-@{
-    ViewData["Title"] = "Spor Tesisleri";
-}
-<h5>@ViewData["Title4"]</h5>
-<br />
+    @{
+    ViewData["Title"] = "Güzellik Merkezleri";
+    }
 
-@if (User.IsInRole("Admin"))
+    <h5>@ViewData["Title4"]</h5>
+    <br />
+
+    @if (User.IsInRole("Admin"))
 {
     <p>
-        <a asp-controller="Admin" asp-action="TesisCreate">@ViewData["Title2"]</a>
+        <a asp-controller="Admin" asp-action="MerkezCreate">@ViewData["Title2"]</a>
     </p>
 }
-<div class="card-columns">
-    @foreach (var item in Model)
+    <div class="card-columns">
+        @foreach (var item in Model)
     {
         <div class="card" style="background-color: aliceblue">
             <div class="card-img">
@@ -34,15 +33,15 @@
                 </div>
             </div>
             <div class="card-body" style="text-align: center;">
-                @if (User.IsInRole("Musteri"))
+                @if (User.IsInRole("Müsteri"))
                 {
-                    <a asp-action="Details" asp-route-id="@item.TesisId" id="link"><h5 class="card-title">@Html.DisplayFor(modelItem => item.TesisAdi)</h5></a>
+                <a asp-action="Details" asp-route-id="@item.TesisId" id="link"><h5 class="card-title">@Html.DisplayFor(modelItem => item.TesisAdi)</h5></a>
                 }
                 else
                 {
-                    <a id="link" class="linki" asp-controller="Admin" asp-action="TesisDetails" asp-route-id="@item.TesisId"><h5 class="card-title">@Html.DisplayFor(modelItem => item.TesisAdi)</h5></a>
+                <a id="link" class="linki" asp-controller="Admin" asp-action="MerkezDetails" asp-route-id="@item.TesisId"><h5 class="card-title">@Html.DisplayFor(modelItem => item.TesisAdi)</h5></a>
                 }
             </div>
         </div>
     }
-</div>
+    </div>

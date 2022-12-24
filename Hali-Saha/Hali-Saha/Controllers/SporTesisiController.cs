@@ -40,32 +40,35 @@ namespace Hali_Saha.Controllers
         // GET: GuzellikMerkezi
         public async Task<IActionResult> Index()
         {
-            ViewData["Title2"] = _localizer["Yeni Tesis Ekle"];
+            ViewData["Title2"] = _localizer["Yeni Merkez Ekle"];
             ViewData["Title3"] = _localizer["Detaylar"];
-            ViewData["Title4"] = _localizer["Spor Tesisleri"];
+            ViewData["Title4"] = _localizer["Güzellik Merkezleri"];
             return View(await _context.Tesisler.ToListAsync());
         }
+
         // GET: GuzellikMerkezi/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int id)
         {
             ViewData["Title"] = _localizer["Güzellik Merkezi Detayları"];
-            ViewData["Title1"] = _localizer["Spor Tesisi Adı"];
+            ViewData["Title1"] = _localizer["Güzellik Merkezi Adı"];
             ViewData["Title2"] = _localizer["Adres"];
-            ViewData["Title4"] = _localizer["Spor Tesisi"];
-            if (id == null)
+            ViewData["Title3"] = _localizer["Email adresi"];
+            ViewData["Title4"] = _localizer["Güzellik Merkezi"];
+            if (id.ToString() == null)
             {
                 return NotFound();
             }
 
-            var sporTesisi = await _context.Tesisler
-                .FirstOrDefaultAsync(m => m.TesisId.ToString() == id);
-            if (sporTesisi == null)
+            var guzellikMerkezi = await _context.Tesisler
+                .FirstOrDefaultAsync(m => m.TesisId == id);
+            if (guzellikMerkezi == null)
             {
                 return NotFound();
             }
 
-            return View(sporTesisi);
+            return View(guzellikMerkezi);
         }
+        
 
     }
 }
