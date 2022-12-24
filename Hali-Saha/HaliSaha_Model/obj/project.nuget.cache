@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CGn6wK69/5c8L+LkIMcFZf/JfST0PpT009xF6UkQaSfACKCPqUsXzSqS5O+LlQ/CCdvuFo2CzMd3/LYVQEGoxw==",
+  "dgSpecHash": "r+iEHWN6yYL6Wr0RrWuBwHZgUm6TfLg5xdKhSIXY7M8NU7a4+M8ih1GtxzpoHTc2UbrJKUBO8o++rym1BrlFuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+  "projectFilePath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\beyzanur\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\beyzanur\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

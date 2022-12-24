@@ -3,8 +3,10 @@
     "",
     "\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha",
-    "\\Hali-Saha\\Hali-Saha\\Controllers"
+    "\\Hali-Saha\\Hali-Saha\\Controllers",
+    "\\Hali-Saha\\HaliSaha_Model",
+    "\\Hali-Saha\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\RandevuController.cs",
   "PreviewInSolutionExplorer": false
 }
