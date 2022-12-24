@@ -14,10 +14,14 @@ namespace Hali_Saha.Controllers
     {
         //sisteme identity üzerinden authentic olmak için kullanıldıgım komut
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
+       // private readonly RoleManager<AppRole> _roleManager; 
 
-        public LoginController(SignInManager<AppUser> signInManager)
+        public LoginController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
         {
             _signInManager = signInManager;
+            _userManager=userManager;
+           
         }
         [HttpGet]
         public IActionResult Index()
@@ -28,10 +32,6 @@ namespace Hali_Saha.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(Login p) //asenkron method oldugu için Task ve await kullanılır
         {
-            string[] roles = new string[2];
-            roles[0] = "Admin";
-            roles[1] = "Musteri";
-
             //kullanıcı verilerini kontrol et
             if (ModelState.IsValid)
             {
@@ -40,17 +40,19 @@ namespace Hali_Saha.Controllers
 
                 if (result.Succeeded)
                 {
-                    var claims = new List<Claim>
-                    {
-                        //sayfadaki cookie kısmı buradaki name ve rolu tutuyor
-                        new Claim(ClaimTypes.Name,p.KullaniciAd),
-                        new Claim(ClaimTypes.Role,roles[0])  //user'ın rollerini alıp roller listesini yollayabilirsin
-                    };
-                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    var authProperties = new AuthenticationProperties();
 
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-                    return RedirectToAction("TesisIndex", "Admin");
+                    var user = _userManager.Users.FirstOrDefault(x => x.UserName == p.KullaniciAd);
+                    var userRoles = await _userManager.GetRolesAsync(user);
+                    
+                    if (userRoles.Contains("Admin"))
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Randevu");
+                    }
+                      
 
                 }
 

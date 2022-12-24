@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +20,10 @@ namespace HaliSaha_Model.Models
 
         public Register kullanici;
 
-       
+
 
         [ForeignKey("sporTesisi")]
-        public int TesisId { get; set; } 
+        public int TesisId { get; set; }
         public SporTesisi sporTesisi { get; set; }
 
 

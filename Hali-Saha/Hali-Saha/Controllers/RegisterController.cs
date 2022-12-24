@@ -1,7 +1,10 @@
 ﻿using HaliSaha_Model.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Runtime.CompilerServices;
@@ -30,10 +33,10 @@ namespace Hali_Saha.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(Register p)
         {
-            //returnUrl = returnUrl ?? Url.Content("~/");
-            //ExternalLogins 
+            string[] roles = new string[2];
+            roles[0] = "Admin";
+            roles[1] = "Musteri";
 
-            //p.Role = "Musteri";
             if (ModelState.IsValid)
             {
                 AppUser user = new AppUser()
@@ -41,28 +44,27 @@ namespace Hali_Saha.Controllers
                         Email =p.KullaniciEmail,
                         UserName=p.KullaniciAd,
                         NameSurname=p.KullaniciSoyad
-                        //Role = "Musteri"
 
                 };
-
-                //AppRole role = new AppRole()
-                //{
-                   
-                //    Name = "Musteri",
-                //    Id=2
-
-                //};
-
                 var result = await _userManager.CreateAsync(user,p.KullaniciSifre);
                 //var addRole = await _userManager.AddToRoleAsync(user,role.Name);
 
                 if (result.Succeeded)
                 {
-                   /* System.Collections.Generic.IEnumerable<string> roles = new string[1];
-                    roles.Append("Musteri");
-                    
-                     await _userManager.AddToRolesAsync(user, roles);*/
+                    /* System.Collections.Generic.IEnumerable<string> roles = new string[1];
+                     roles.Append("Musteri");
 
+                      await _userManager.AddToRolesAsync(user, roles);*/
+                    var claims = new List<Claim>
+                    {
+                        //sayfadaki cookie kısmı buradaki name ve rolu tutuyor
+                        new Claim(ClaimTypes.Name,p.KullaniciAd),
+                        new Claim(ClaimTypes.Role,roles[1])  //user'ın rollerini alıp roller listesini yollayabilirsin
+                    };
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var authProperties = new AuthenticationProperties();
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
                     return RedirectToAction("Index", "Login");
                 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj": {}
+    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\beyzanur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
-                "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj"
+              "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
+                "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj": {
+    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj",
+        "projectUniqueName": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj",
         "projectName": "Hali-Saha",
-        "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj",
+        "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\Hali-Saha\\Hali-Saha.csproj",
         "packagesPath": "C:\\Users\\beyzanur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\Hali-Saha\\obj\\",
+        "outputPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\Hali-Saha\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -121,11 +121,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
-                "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj"
+              "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
+                "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj"
               }
             }
           }
@@ -186,14 +186,14 @@
         }
       }
     },
-    "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
+    "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+        "projectUniqueName": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
         "projectName": "HaliSaha_Model",
-        "projectPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
+        "projectPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\HaliSaha_Model.csproj",
         "packagesPath": "C:\\Users\\beyzanur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beyzanur\\Documents\\GitHub\\Hali-Saha-Web-Projesi\\Hali-Saha\\HaliSaha_Model\\obj\\",
+        "outputPath": "C:\\Users\\beyzanur\\Desktop\\Hali-Saha-Web-Projesi-main\\Hali-Saha\\HaliSaha_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
