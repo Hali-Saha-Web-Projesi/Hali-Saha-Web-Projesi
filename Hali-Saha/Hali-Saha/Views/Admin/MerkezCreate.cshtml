@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@model HaliSaha_Model.Models.SporTesisi
+@{
+    ViewData["Title"] = _localizer["Spor Tesisi Ekle"];
+    ViewData["Title9"] = _localizer["Spor Tesisi Resmi"];
+    ViewData["Title10"] = _localizer["Spor Tesisi ID"];
+    ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+    ViewData["Title3"] = _localizer["Adresi"];
+    ViewData["Title6"] = _localizer["Ekle"];
+    ViewData["Title8"] = _localizer["Spor Tesislerine Geri Dön"];
+}
+
+
+<h5>@ViewData["Title"]</h5>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MerkezCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">@ViewData["Title9"]</label>
+                <input type="url" asp-for="TesisResmi" class="form-control" />
+                <span asp-validation-for="@Model.TesisResmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> @ViewData["Title10"] </label>
+                <input type="number" asp-for="TesisId" class="form-control" />
+                <span asp-validation-for="@Model.TesisId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> @ViewData["Title2"]</label>
+                <input asp-for="TesisAdi" class="form-control" />
+                <span asp-validation-for="@Model.TesisAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">@ViewData["Title3"]</label>
+                <input asp-for="TesisAdresi" class="form-control" />
+                <span asp-validation-for="@Model.TesisAdresi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@ViewData["Title6"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="TesisIndex">@ViewData["Title8"]</a>
+</div>
+

@@ -15,7 +15,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.LoginPath = "/Login/Index";     //kullanýcý bulunamazsa nereye yönleneceði(cookie bulunamazsa yani) indexe gider.
     options.AccessDeniedPath = "/Login/Index";//kullanýcýnýn ayný zamanda yetkili olmasý için kullanýlýr. yetkisiz kullanýcýyý da login ýndexe gönder
 });
-
+//builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
 //LOCALÝZATÝON ÝÇÝN

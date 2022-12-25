@@ -207,3 +207,9 @@ C:\Users\beyzanur\Desktop\Hali-Saha-Web-Projesi-main\Hali-Saha\Hali-Saha\obj\Deb
 C:\Users\beyzanur\Desktop\Hali-Saha-Web-Projesi-main\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.pdb
 C:\Users\beyzanur\Desktop\Hali-Saha-Web-Projesi-main\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.genruntimeconfig.cache
 C:\Users\beyzanur\Desktop\Hali-Saha-Web-Projesi-main\Hali-Saha\Hali-Saha\obj\Debug\net6.0\ref\Hali-Saha.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\beyzanur\Documents\GitHub\Hali-Saha-Web-Projesi\Hali-Saha\Hali-Saha\obj\Debug\net6.0\Hali-Saha.MvcApplicationPartsAssemblyInfo.cs

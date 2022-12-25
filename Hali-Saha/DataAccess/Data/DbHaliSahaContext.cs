@@ -5,9 +5,11 @@
 using HaliSaha_Model.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +23,7 @@ namespace DataAccess.Data
 
         //migrationstaki kodların dolu olması için oluşturulmalı.
        // public DbSet<Kullanici> Kullanicilar { get; set; } //veritabanındaki Kullanicilar tablosu
-        public DbSet<Randevu> Randevular { get; set; }
+       // public DbSet<Randevu> Randevular { get; set; }
         public DbSet<SporTesisi> Tesisler { get; set; }
         //public DbSet<Register> Registers { get; set; }
 
@@ -35,9 +37,13 @@ namespace DataAccess.Data
        //         .WithMany(g => g.randevular)
        //         .HasForeignKey(r => r.TesisId);
        //     modelBuilder.Entity<Randevu>()
-       //         .HasOne(r => r.kullanici1)
+       //         .HasOne(r => r.kullanici)
        //         .WithMany(u => u.randevular)
        //         .HasForeignKey(r => r.KullaniciId);
+
+
+
+
        // }
         public DbHaliSahaContext(DbContextOptions<DbHaliSahaContext> options) : base
    (options)

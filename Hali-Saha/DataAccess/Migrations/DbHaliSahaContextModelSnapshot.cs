@@ -124,104 +124,6 @@ namespace DataAccess.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("HaliSaha_Model.Models.Kullanici", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("KullaniciAd")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("KullaniciEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("KullaniciId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("KullaniciSifre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Kullanici");
-                });
-
-            modelBuilder.Entity("HaliSaha_Model.Models.Randevu", b =>
-                {
-                    b.Property<int>("RandevuId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RandevuId"), 1L, 1);
-
-                    b.Property<int>("KullaniciId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TesisId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("kullanici1Id")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("randevuTarihi")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("RandevuId");
-
-                    b.HasIndex("TesisId");
-
-                    b.HasIndex("kullanici1Id");
-
-                    b.ToTable("Randevular");
-                });
-
             modelBuilder.Entity("HaliSaha_Model.Models.SporTesisi", b =>
                 {
                     b.Property<int>("TesisId")
@@ -237,13 +139,6 @@ namespace DataAccess.Migrations
                     b.Property<string>("TesisAdresi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TesisDegerlendirmesi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TesisPuani")
-                        .HasColumnType("int");
 
                     b.Property<string>("TesisResmi")
                         .IsRequired()
@@ -357,25 +252,6 @@ namespace DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("HaliSaha_Model.Models.Randevu", b =>
-                {
-                    b.HasOne("HaliSaha_Model.Models.SporTesisi", "sporTesisi")
-                        .WithMany("randevular")
-                        .HasForeignKey("TesisId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HaliSaha_Model.Models.Kullanici", "kullanici1")
-                        .WithMany("randevular")
-                        .HasForeignKey("kullanici1Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("kullanici1");
-
-                    b.Navigation("sporTesisi");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("HaliSaha_Model.Models.AppRole", null)
@@ -425,16 +301,6 @@ namespace DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("HaliSaha_Model.Models.Kullanici", b =>
-                {
-                    b.Navigation("randevular");
-                });
-
-            modelBuilder.Entity("HaliSaha_Model.Models.SporTesisi", b =>
-                {
-                    b.Navigation("randevular");
                 });
 #pragma warning restore 612, 618
         }

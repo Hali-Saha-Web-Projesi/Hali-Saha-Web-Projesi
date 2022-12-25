@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@model IEnumerable<HaliSaha_Model.Models.SporTesisi>
+@{
+
+    ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+    ViewData["Title3"] = _localizer["Adresi"];
+    ViewData["Title6"] = _localizer["Düzenle"];
+    ViewData["Title7"] = _localizer["Sil"];
+    ViewData["Title8"] = _localizer["Detaylar"];
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                @ViewData["Title2"]
+            </th>
+            <th>
+                @ViewData["Title3"]
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.TesisResmi)" id="admin" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TesisAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TesisAdresi)
+                </td>
+
+                <td>
+                    <a asp-action="MerkezEdit" asp-route-id="@item.TesisId"> @ViewData["Title6"]  |</a>
+                    <a asp-action="MerkezDelete" asp-route-id="@item.TesisId">@ViewData["Title7"] |</a>
+                    <a asp-action="MerkezDetails" asp-route-id="@item.TesisId">@ViewData["Title8"]</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace HaliSaha_Model.Models
 {
     public class SporTesisi
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int TesisId { get; set; }
 
@@ -22,16 +24,14 @@ namespace HaliSaha_Model.Models
         [DataType(DataType.ImageUrl)]
         public string TesisResmi { get; set; }
 
-        [Display(Name = "Değerlendirmeniz")]
-        [DataType(DataType.MultilineText)]
-        public string TesisDegerlendirmesi { get; set; }
+        //[Display(Name = "Değerlendirmeniz")]
+        //[DataType(DataType.MultilineText)]
+        //public string TesisDegerlendirmesi { get; set; }
 
-        [Display(Name = "Puanınız")]
-        public int TesisPuani { get; set; }
+        //[Display(Name = "Puanınız")]
+        //public int TesisPuani { get; set; }
 
-        public ICollection<Randevu> randevular { get; set; }
-
-
+       //public ICollection<Randevu> randevular { get; set; }
 
     }
 }

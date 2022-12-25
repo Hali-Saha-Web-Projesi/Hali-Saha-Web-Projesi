@@ -22,11 +22,11 @@ namespace Hali_Saha.Controllers
             _localizer = localizer;
         }
 
-        //public async Task<IActionResult> Index()
-        //{
-            
-        //    return View();
-        //}
+        public async Task<IActionResult> Index()
+        {
+
+            return View();
+        }
 
         [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
@@ -39,164 +39,151 @@ namespace Hali_Saha.Controllers
 
             return LocalRedirect(returnUrl);
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> TesisIndex()
         {
-            ViewData["Title"] = _localizer["Güzellik Merkezleri"];
-            ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
+            ViewData["Title"] = _localizer["Spor Tesisleri"];
+            ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
             ViewData["Title3"] = _localizer["Adresi"];
-            ViewData["Title4"] = _localizer["Email Adresi"];
             ViewData["Title5"] = _localizer["Merkez Ekle"];
             ViewData["Title3"] = _localizer["Düzenle"];
             ViewData["Title4"] = _localizer["Sil"];
             ViewData["Title5"] = _localizer["Detaylar"];
             return View(await _context.Tesisler.ToListAsync());
         }
-        //public async Task<IActionResult> MerkezDetails(int id)
-        //{
-        //    ViewData["Title"] = _localizer["Güzellik Merkezlerinin Detaylarını Gör"];
-        //    ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
-        //    ViewData["Title3"] = _localizer["Adresi"];
-        //    ViewData["Title4"] = _localizer["Email Adresi"];
-        //    ViewData["Title6"] = _localizer["Düzenle"];
-        //    ViewData["Title7"] = _localizer["Randevu Al"];
-        //    ViewData["Title8"] = _localizer["Güzellik Merkezlerine Geri Dön"];
-        //    if (id.ToString() == null)
-        //    {
-        //        return NotFound();
-        //    }
+        public async Task<IActionResult> MerkezDetails(int id)
+        {
+            ViewData["Title"] = _localizer["Spor Tesislerinin Detaylarını Gör"];
+            ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+            ViewData["Title3"] = _localizer["Adresi"];
+            ViewData["Title6"] = _localizer["Düzenle"];
+            ViewData["Title8"] = _localizer["Spor Tesislerine Geri Dön"];
+            if (id.ToString() == null)
+            {
+                return NotFound();
+            }
 
-        //    var guzellikMerkezi = await _context.Tesisler
-        //        .FirstOrDefaultAsync(m => m.TesisId == id);
-        //    if (guzellikMerkezi == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var sporTesisi = await _context.Tesisler
+                .FirstOrDefaultAsync(m => m.TesisId == id);
+            if (sporTesisi == null)
+            {
+                return NotFound();
+            }
 
-        //    return View(guzellikMerkezi);
-        //}
-        //// GET: GuzellikMerkezi/Create
-        //public IActionResult MerkezCreate()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> MerkezCreate([Bind("TesisId,TesisAdi,TesisAdresi,TesisResmi,TesisDegerlendirmesi,TesisPuani")] SporTesisi guzellikMerkezi)
-        //{
-        //    ViewData["Title"] = _localizer["Güzellik Merkezi Ekle"];
-        //    ViewData["Title9"] = _localizer["Güzellik Merkezi Resmi"];
-        //    ViewData["Title10"] = _localizer["Güzellik Merkezi ID"];
-        //    ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
-        //    ViewData["Title3"] = _localizer["Adresi"];
-        //    ViewData["Title4"] = _localizer["Email Adresi"];
-        //    ViewData["Title6"] = _localizer["Ekle"];
-        //    ViewData["Title8"] = _localizer["Güzellik Merkezlerine Geri Dön"];
-        //    if (ModelState.IsValid)
-        //    {
-        //        _context.Add(guzellikMerkezi);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(MerkezIndex));
-        //    }
-        //    return View(guzellikMerkezi);
-        //}
-        //// GET: GuzellikMerkezi/Edit/5
-        //public async Task<IActionResult> MerkezEdit(int id)
-        //{
-        //    ViewData["Title"] = _localizer["Güzellik Merkezini Düzenle"];
-        //    ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
-        //    ViewData["Title3"] = _localizer["Adresi"];
-        //    ViewData["Title4"] = _localizer["Email Adresi"];
-        //    ViewData["Title5"] = _localizer["Kaydet"];
-        //    ViewData["Title6"] = _localizer["Güzellik Merkezlerine Geri Dön"];
-        //    ViewData["Title7"] = _localizer["Merkez Resmi"];
-        //    if (id.ToString() == null)
-        //    {
-        //        return NotFound();
-        //    }
+            return View(sporTesisi);
+        }
+        // GET: GuzellikMerkezi/Create
+        public IActionResult MerkezCreate()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MerkezCreate([Bind(nameof(SporTesisi.TesisId), nameof(SporTesisi.TesisAdi), nameof(SporTesisi.TesisAdresi), nameof(SporTesisi.TesisResmi))] SporTesisi sporTesisi)
+        {
+            ViewData["Title"] = _localizer["Spor Tesisi Ekle"];
+            ViewData["Title9"] = _localizer["Spor Tesisi Resmi"];
+            ViewData["Title10"] = _localizer["Spor Tesisi ID"];
+            ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+            ViewData["Title3"] = _localizer["Adresi"];
+            ViewData["Title6"] = _localizer["Ekle"];
+            ViewData["Title8"] = _localizer["Spor Tesislerine Geri Dön"];
+            if (ModelState.IsValid)
+            {
+                _context.Add(sporTesisi);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(TesisIndex));
+            }
+            return View(sporTesisi);
+        }
+        // GET: GuzellikMerkezi/Edit/5
+        public async Task<IActionResult> MerkezEdit(int id)
+        {
+            ViewData["Title"] = _localizer["Spor Tesisini Düzenle"];
+            ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+            ViewData["Title3"] = _localizer["Adresi"];
+            ViewData["Title5"] = _localizer["Kaydet"];
+            ViewData["Title6"] = _localizer["Spor Tesislerine Geri Dön"];
+            ViewData["Title7"] = _localizer["Spor Tesisi Resmi"];
+            if (id.ToString() == null)
+            {
+                return NotFound();
+            }
 
-        //    var guzellikMerkezi = await _context.Tesisler.FindAsync(id);
-        //    if (guzellikMerkezi == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(guzellikMerkezi);
-        //}
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> MerkezEdit(int id, [Bind("TesisId,TesisAdi,TesisAdresi,TesisResmi,TesisDegerlendirmesi,TesisPuani")] SporTesisi guzellikMerkezi)
-        //{
-        //    if (id != guzellikMerkezi.TesisId)
-        //    {
-        //        return NotFound();
-        //    }
+            var sporTesisi = await _context.Tesisler.FindAsync(id);
+            if (sporTesisi == null)
+            {
+                return NotFound();
+            }
+            return View(sporTesisi);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MerkezEdit(int id, [Bind(nameof(SporTesisi.TesisId), nameof(SporTesisi.TesisAdi), nameof(SporTesisi.TesisAdresi), nameof(SporTesisi.TesisResmi))] SporTesisi sporTesisi)
+        {
+            if (id != sporTesisi.TesisId)
+            {
+                return NotFound();
+            }
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            _context.Update(guzellikMerkezi);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!GuzellikMerkeziExists(guzellikMerkezi.TesisId))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(MerkezIndex));
-        //    }
-        //    return View(guzellikMerkezi);
-        //}
-        //// GET: GuzellikMerkezi/Delete/5
-        //public async Task<IActionResult> MerkezDelete(int id)
-        //{
-        //    ViewData["Title"] = _localizer["Güzellik Merkezini Sil"];
-        //    ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
-        //    ViewData["Title3"] = _localizer["Adresi"];
-        //    ViewData["Title4"] = _localizer["Email Adresi"];
-        //    ViewData["Title6"] = _localizer["Sil"];
-        //    ViewData["Title8"] = _localizer["Güzellik Merkezlerine Geri Dön"];
-        //    if (id.ToString() == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(sporTesisi);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!SporTesisiExists(sporTesisi.TesisId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw; 
+                    }
+                }
+                return RedirectToAction(nameof(TesisIndex));
+            }
+            return View(sporTesisi);
+        }
+        // GET: GuzellikMerkezi/Delete/5
+        public async Task<IActionResult> MerkezDelete(int id)
+        {
+            ViewData["Title"] = _localizer["Spor Tesisini Sil"];
+            ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+            ViewData["Title3"] = _localizer["Adresi"];
+            ViewData["Title6"] = _localizer["Sil"];
+            ViewData["Title8"] = _localizer["Spor Tesislerine Geri Dön"];
+            if (id.ToString() == null)
+            {
+                return NotFound();
+            }
 
-        //    var guzellikMerkezi = await _context.Tesisler
-        //        .FirstOrDefaultAsync(m => m.TesisId == id);
-        //    if (guzellikMerkezi == null)
-        //    {
-        //        return NotFound();
-        //    }
+            var sporTesisi = await _context.Tesisler
+                .FirstOrDefaultAsync(m => m.TesisId == id);
+            if (sporTesisi == null)
+            {
+                return NotFound();
+            }
 
-        //    return View(guzellikMerkezi);
-        //}
-        //// POST: GuzellikMerkezi/Delete/5
-        //[HttpPost, ActionName("MerkezDelete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> MerkezDeleteConfirmed(int id)
-        //{
-        //    var guzellikMerkezi = await _context.Tesisler.FindAsync(id);
-        //    _context.Tesisler.Remove(guzellikMerkezi);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(MerkezIndex));
-        //}
+            return View(sporTesisi);
+        }
+        // POST: GuzellikMerkezi/Delete/5
+        [HttpPost, ActionName("MerkezDelete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MerkezDeleteConfirmed(int id)
+        {
+            var sporTesisi = await _context.Tesisler.FindAsync(id);
+            _context.Tesisler.Remove(sporTesisi);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(TesisIndex));
+        }
 
-        //private bool GuzellikMerkeziExists(int id)
-        //{
-        //    return _context.Tesisler.Any(e => e.TesisId == id);
-        //}
-
-
-
-
-
-
-
+        private bool SporTesisiExists(int id)
+        {
+            return _context.Tesisler.Any(e => e.TesisId == id);
+        }
 
     }
 }

@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@model HaliSaha_Model.Models.SporTesisi
+@{
+    ViewData["Title"] = _localizer["Spor Tesisi Detaylarını Gör"];
+    ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+    ViewData["Title3"] = _localizer["Adresi"];
+    ViewData["Title6"] = _localizer["Düzenle"];
+    ViewData["Title8"] = _localizer["Spor Tesislerine Geri Dön"];
+}
+
+<h5>@ViewData["Title"]</h5>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(model => model.TesisResmi)" />
+        </dd>
+        <dt class="col-sm-2">
+            @ViewData["Title2"]
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TesisAdi)
+        </dd>
+        <dt class="col-sm-2">
+            @ViewData["Title3"]
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TesisAdresi)
+        </dd>
+        <dt class="col-sm-2">
+            @ViewData["Title4"]
+        </dt>
+    </dl>
+</div>
+<div>
+    <a asp-action="MerkezEdit" asp-route-id="@Model.TesisId">@ViewData["Title6"] |</a>
+    <a asp-action="TesisIndex">@ViewData["Title8"]</a>
+</div>

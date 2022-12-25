@@ -12,8 +12,9 @@ namespace HaliSaha_Model.Models
     public class AppUser :IdentityUser <int> //<int> alıyordu onceden sıkıntı cıkacak mı bak
     {
         public string NameSurname { get; set; }
+       // public ICollection<Randevu> randevular { get; set; }
         //public string Password { get; set; }
-       // public string Role { get; set; }
+        // public string Role { get; set; }
         //[Display(Name = "Adınız")]
         //public string uyeAdi { get; set; }
         //[Display(Name = "Soyadınız")]

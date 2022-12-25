@@ -1,7 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer _localizer
-@model IEnumerable<HaliSaha_Model.Models.SporTesisi>
-
+﻿
 @{
     Layout = null;
 }
@@ -56,7 +53,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a asp-controller="Home" asp-action="Index" class="active">Anasayfa</a></li>
-                    <li><a asp-controller="Admin" asp-action="Index">Tesis Ekle</a></li>
+                    <li><a asp-controller="Admin" asp-action="MerkezCreate">Tesis Ekle</a></li>
                     <li><a asp-controller="Login" asp-action="Index">Giriş Yap</a></li>
                     <li><a asp-controller="Register" asp-action="Index">Üye Ol</a></li>
 
@@ -87,66 +84,4 @@
 </body>
 </html>
 
-@{
-    ViewData["Title"] = _localizer["Güzellik Merkezleri"];
-    ViewData["Title2"] = _localizer["Güzellik Merkezi Adı"];
-    ViewData["Title3"] = _localizer["Adresi"];
-    ViewData["Title4"] = _localizer["Email Adresi"];
-    ViewData["Title5"] = _localizer["Merkez Ekle"];
-    ViewData["Title6"] = _localizer["Düzenle"];
-    ViewData["Title7"] = _localizer["Sil"];
-    ViewData["Title8"] = _localizer["Detaylar"];
-}
-<h5>@ViewData["Title"]</h5>
 
-<p>
-    <a asp-controller="Admin" asp-action="MerkezCreate">@ViewData["Title5"]</a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-
-            </th>
-            <th>
-                @ViewData["Title2"]
-            </th>
-            <th>
-                @ViewData["Title3"]
-            </th>
-            <th>
-                @ViewData["Title4"]
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.TesisResmi)" id="admin" />
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TesisAdi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TesisAdresi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TesisDegerlendirmesi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TesisPuani)
-                </td>
-
-                <td>
-                    <a asp-action="MerkezEdit" asp-route-id="@item.TesisId"> @ViewData["Title6"]  |</a>
-                    <a asp-action="MerkezDelete" asp-route-id="@item.TesisId">@ViewData["Title7"] |</a>
-                    <a asp-action="MerkezDetails" asp-route-id="@item.TesisId">@ViewData["Title8"]</a> |
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
