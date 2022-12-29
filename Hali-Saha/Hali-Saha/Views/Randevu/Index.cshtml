@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@model IEnumerable<HaliSaha_Model.Models.Randevu>
+@{
+
+    ViewData["Title2"] = _localizer["Spor Tesisi Adı"];
+    ViewData["Title6"] = _localizer["Düzenle"];
+    ViewData["Title7"] = _localizer["Sil"];
+    ViewData["Title8"] = _localizer["Detaylar"];
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>
+                    <a asp-action="Create">Yeni Oluştur</a>
+                </p>
+            </th>
+            <th>
+                @ViewData["Title2"]
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TesisAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.randevuSaati)
+                </td>
+
+@*                <td>
+                    <a asp-action="Edit" asp-route-id="@item.randevuId"> @ViewData["Title6"]  |</a>
+                    <a asp-action="Delete" asp-route-id="@item.randevuId">@ViewData["Title7"] |</a>
+                    <a asp-action="Details" asp-route-id="@item.randevuId">@ViewData["Title8"]</a> |
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

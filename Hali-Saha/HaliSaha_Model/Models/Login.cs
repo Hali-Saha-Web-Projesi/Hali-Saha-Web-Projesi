@@ -16,7 +16,7 @@ namespace HaliSaha_Model.Models
         [Required(ErrorMessage = "Lütfen şifrenizi giriniz.")]
         [DataType(DataType.Password)]
         [Display(Name = "Şifre  :")]
-        [MinLength(8, ErrorMessage = "Şifreniz minimum 8 karakterden oluşmalıdır.")]
+        [MinLength(3, ErrorMessage = "Şifreniz minimum 3 karakterden oluşmalıdır.")]
         public string KullaniciSifre { get; set; }
 
         [Required(ErrorMessage = "Lütfen kullanıcı adınızı giriniz.")]

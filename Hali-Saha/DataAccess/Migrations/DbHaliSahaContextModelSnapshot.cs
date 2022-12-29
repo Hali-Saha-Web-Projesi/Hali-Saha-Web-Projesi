@@ -124,6 +124,29 @@ namespace DataAccess.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("HaliSaha_Model.Models.Randevu", b =>
+                {
+                    b.Property<int>("randevuId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("randevuId"), 1L, 1);
+
+                    b.Property<string>("TesisAdi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("kullanici_Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("randevuSaati")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("randevuId");
+
+                    b.ToTable("Randevular");
+                });
+
             modelBuilder.Entity("HaliSaha_Model.Models.SporTesisi", b =>
                 {
                     b.Property<int>("TesisId")

@@ -1,4 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Threading.Tasks
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Http.Features
+
+@inject IViewLocalizer _localizer
+@{
+    ViewData["Title2"] = _localizer["Krampon Spor'a Hoşgeldiniz"];
+
+}
+@{
+    ViewData["Title"] = "Krampon Spor";
+}
+
+<!DOCTYPE html>
 <html lang="en" style="background:no-repeat center center fixed">
 
 <head>
@@ -13,14 +29,21 @@
 </head>
 
 <body>
+    <div>
+        <center>
+            @*<h1 class="display-4">@ViewData["Title2"]</h1>*@
+            
+        </center>
 
+    </div>
+    <br />
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <h2> <span>Krampon Spor</span> sayfamıza hoş geldiniz. </h2>
-                    <p>Halı Sahalar için randevu oluşturmak,halısahalara yorum yapabilmek ve daha fazlası için bizi takip etmeyi unutmayın..</p>
+                    <h2> <span>@_localizer["Krampon Spor"]</span> @_localizer["sayfamıza hoş geldiniz."] </h2>
+                    <p>@_localizer["Halı Sahalar için randevu oluşturmak,halısahalara yorum yapabilmek ve daha fazlası için bizi takip etmeyi unutmayın.."]</p>
                 </div>
             </div>
         </div>
@@ -200,6 +223,12 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+
+
+
+
+
 
 </body>
 

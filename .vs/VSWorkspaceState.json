@@ -3,13 +3,15 @@
     "",
     "\\Hali-Saha",
     "\\Hali-Saha\\Hali-Saha",
-    "\\Hali-Saha\\Hali-Saha\\Controllers",
+    "\\Hali-Saha\\Hali-Saha\\Resources",
+    "\\Hali-Saha\\Hali-Saha\\Resources\\SporTesisi",
     "\\Hali-Saha\\Hali-Saha\\Views",
-    "\\Hali-Saha\\Hali-Saha\\Views\\Admin",
+    "\\Hali-Saha\\Hali-Saha\\Views\\Randevu",
+    "\\Hali-Saha\\Hali-Saha\\Views\\Shared",
     "\\Hali-Saha\\Hali-Saha\\Views\\SporTesisi",
     "\\Hali-Saha\\HaliSaha_Model",
     "\\Hali-Saha\\HaliSaha_Model\\Models"
   ],
-  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Controllers\\AdminController.cs",
+  "SelectedNode": "\\Hali-Saha\\Hali-Saha\\Views\\Randevu\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

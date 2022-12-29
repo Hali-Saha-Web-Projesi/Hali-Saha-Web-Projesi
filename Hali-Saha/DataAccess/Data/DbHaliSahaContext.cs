@@ -22,8 +22,8 @@ namespace DataAccess.Data
     {
 
         //migrationstaki kodların dolu olması için oluşturulmalı.
-       // public DbSet<Kullanici> Kullanicilar { get; set; } //veritabanındaki Kullanicilar tablosu
-       // public DbSet<Randevu> Randevular { get; set; }
+        // public DbSet<Kullanici> Kullanicilar { get; set; } //veritabanındaki Kullanicilar tablosu
+        public DbSet<Randevu> Randevular { get; set; }
         public DbSet<SporTesisi> Tesisler { get; set; }
         //public DbSet<Register> Registers { get; set; }
 
@@ -31,21 +31,17 @@ namespace DataAccess.Data
        // {
        //     base.OnModelCreating(modelBuilder);
        //     modelBuilder.Entity<Randevu>()
-       //.HasKey(r => new { r.TesisId, r.KullaniciId });
+       //.HasKey(r => new { r.kullaniciId });
        //     modelBuilder.Entity<Randevu>()
-       //         .HasOne(r => r.sporTesisi)
-       //         .WithMany(g => g.randevular)
-       //         .HasForeignKey(r => r.TesisId);
-       //     modelBuilder.Entity<Randevu>()
-       //         .HasOne(r => r.kullanici)
+       //         .HasOne(r => r.Kullanici)
        //         .WithMany(u => u.randevular)
-       //         .HasForeignKey(r => r.KullaniciId);
+       //         .HasForeignKey(r => r.kullaniciId);
 
 
 
 
-       // }
-        public DbHaliSahaContext(DbContextOptions<DbHaliSahaContext> options) : base
+       //  }
+            public DbHaliSahaContext(DbContextOptions<DbHaliSahaContext> options) : base
    (options)
         {
             //Database.EnsureCreated();
