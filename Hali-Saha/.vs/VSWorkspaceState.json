@@ -1,16 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataAccess",
-    "\\DataAccess\\Data",
     "\\Hali-Saha",
-    "\\Hali-Saha\\Controllers",
+    "\\Hali-Saha\\Resources",
+    "\\Hali-Saha\\Resources\\Home",
     "\\Hali-Saha\\Views",
-    "\\Hali-Saha\\Views\\Login",
-    "\\Hali-Saha\\Views\\Register",
-    "\\HaliSaha_Model",
-    "\\HaliSaha_Model\\Models"
+    "\\Hali-Saha\\Views\\Admin",
+    "\\Hali-Saha\\Views\\Home",
+    "\\Hali-Saha\\Views\\Randevu"
   ],
-  "SelectedNode": "\\Hali-Saha.sln",
+  "SelectedNode": "\\Hali-Saha\\Views\\Randevu\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }
